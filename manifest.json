@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "RefreCSSher",
+  "description": "Reloads css files for a given tab.",
+  "version": "1.0.2",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "realicon.png",
+    "default_popup": "popup.html"
+  }
+}
