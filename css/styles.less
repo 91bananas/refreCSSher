@@ -60,20 +60,24 @@ h3 {
 	background: #444444;
 	color: white;
 }
-ul#list_of_files {
-	list-style: none;
-    padding-left: 0;
-	margin: 0;
-	li {
-		padding: 6px;
-		&:nth-child(odd) {
-			background: #f5f5f5;
+div.file_wrapper {
+	max-height: 600px;
+	overflow-y: scroll;
+	ul#list_of_files {
+		list-style: none;
+	    padding-left: 0;
+		margin: 0;
+		li {
+			padding: 6px;
+			&:nth-child(odd) {
+				background: #f5f5f5;
+			}
 		}
 	}
 }
 div.button {
     display: block;
-    padding: 15px;
+    padding: 15px 0;
 	button {
 	    margin: 0 auto;
 	    width: 100%;

@@ -25,10 +25,11 @@ chrome.extension.onMessage.addListener(
     	console.log(request);
     }
 	
-	//localStorage.setObject('refrecssher', null);
+	localStorage.setObject('refrecssher', null);
     if (request.greeting == "hello")
     {
-    	console.log(request);
+    	if (debug)
+    		console.log(request);
 		if (request.dataz)
 		{
 			fylz = request.dataz;
