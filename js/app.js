@@ -24,7 +24,7 @@ chrome.extension.onMessage.addListener(
                 "from the extension");
     	console.log(request);
     }
-	
+
 	localStorage.setObject('refrecssher', null);
     if (request.greeting == "hello")
     {
@@ -60,7 +60,7 @@ chrome.extension.onMessage.addListener(
       	sendResponse({marewell: "poop"});
 	}
 	local = localStorage.getObject('refrecssher');
-    
+
 	build_list(local);
 	return true;
 });
@@ -73,7 +73,7 @@ Storage.prototype.getObject = function(key) {
     var value = this.getItem(key);
     return value && JSON.parse(value);
 }
-function build_list(obj) 
+function build_list(obj)
 {
 	if (debug)
 		console.log(obj);
@@ -107,7 +107,7 @@ jQuery(document).ready(function () {
 		});
 		console.log(file_list);
 		localStorage.setObject('refrecssher', local);
-		
+
 		//console.log(file_list);
 		chrome.tabs.query(argz, function(tabs) {
 			chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello", dataz: file_list}, function(response) {
@@ -121,6 +121,6 @@ jQuery(document).ready(function () {
 			jQuery('#list_of_files').find('input[type="checkbox"]').prop('checked', true);
 		else
 			jQuery('#list_of_files').find('input[type="checkbox"]').prop('checked', false);
-	}); 
+	});
 
 });
